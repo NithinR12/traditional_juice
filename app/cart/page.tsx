@@ -26,7 +26,7 @@ export default function CartPage() {
             It seems you haven&apos;t curated your organic collection yet. Discover our pure, sustainable offerings and find what speaks to you.
           </p>
           <Link
-            href="/products"
+            href="/traditional_juice/products/"
             className="group relative inline-flex items-center justify-center px-10 py-5 bg-green-900 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
           >
             <span className="relative z-10 flex items-center">
@@ -169,7 +169,7 @@ export default function CartPage() {
 
                 <div className="pt-10 space-y-4">
                   <Link
-                    href="/checkout"
+                    href="/traditional_juice/checkout/"
                     className="group relative w-full inline-flex items-center justify-center px-10 py-5 bg-white text-green-900 text-[10px] font-black uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
                   >
                     <span className="relative z-10 flex items-center gap-3">
@@ -180,7 +180,7 @@ export default function CartPage() {
                   </Link>
                   
                   <Link
-                    href="/products"
+                    href="/traditional_juice/products/"
                     className="w-full inline-flex items-center justify-center py-4 text-white/40 hover:text-white transition-all text-[10px] font-black uppercase tracking-[0.2em] group"
                   >
                     <span className="w-0 group-hover:w-4 h-px bg-accent mr-0 group-hover:mr-2 transition-all duration-300" />

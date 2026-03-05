@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-8">
-            <Link href="/" className="group inline-block">
+            <Link href="/traditional_juice/" className="group inline-block">
               <h3 className="text-3xl font-serif font-bold text-white tracking-tighter transition-all duration-500">
                 Purity<span className="text-accent italic font-light ml-1">of</span>Nature
               </h3>
@@ -33,7 +33,7 @@ export default function Footer() {
               {['Home', 'Products', 'Our Story', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link 
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                    href={item === 'Home' ? '/traditional_juice/' : `/traditional_juice/${item.toLowerCase().replace(' ', '-')}/`}
                     className="text-stone-400 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-widest group flex items-center"
                   >
                     <span className="w-0 group-hover:w-4 h-px bg-accent mr-0 group-hover:mr-2 transition-all duration-300" />
@@ -51,7 +51,7 @@ export default function Footer() {
               {['Juice', 'Tea', 'Coffee', 'Snacks'].map((item) => (
                 <li key={item}>
                   <Link 
-                    href={`/products?category=${item}`}
+                    href={`/traditional_juice/products/?category=${item}`}
                     prefetch={false}
                     className="text-stone-400 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-widest group flex items-center"
                   >
