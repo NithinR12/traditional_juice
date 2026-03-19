@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: '/traditional_juice',
-  assetPrefix: '/traditional_juice/',
   trailingSlash: true,
   images: {
     unoptimized: true,
