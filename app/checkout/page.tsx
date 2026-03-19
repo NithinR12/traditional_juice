@@ -40,35 +40,7 @@ export default function CheckoutPage() {
     setIsProcessing(true);
 
     try {
-      // Create order
-      const orderResponse = await fetch('/api/orders', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          customerName: `${data.firstName} ${data.lastName}`,
-          customerEmail: data.email,
-          address: data.address,
-          city: data.city,
-          zipCode: data.zipCode,
-          country: data.country,
-          totalAmount: cartTotal,
-          items: items.map((item) => ({
-            productId: item.id,
-            quantity: item.quantity,
-            price: item.price,
-          })),
-        }),
-      });
-
-      if (!orderResponse.ok) {
-        throw new Error('Failed to create order');
-      }
-
-      const order = await orderResponse.json();
-
-      // Simulate payment processing delay
+      // Simulate order processing delay (GitHub Pages is static, so we skip the DB call)
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       try {
@@ -76,14 +48,14 @@ export default function CheckoutPage() {
           const permission = await Notification.requestPermission();
           if (permission === 'granted') {
             new Notification('Order Placed', {
-              body: `Order #${order.id.slice(0, 8)} confirmed. Total $${cartTotal.toFixed(2)}`,
+              body: `Your order has been confirmed. Total $${cartTotal.toFixed(2)}`,
             });
           }
         }
       } catch {}
 
       clearCart();
-      router.push(`/order/${order.id}`);
+      router.push('/order/success');
     } catch (error) {
       console.error('Checkout error:', error);
       alert('Checkout failed. Please try again.');

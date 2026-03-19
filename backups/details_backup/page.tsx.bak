@@ -22,6 +22,10 @@ interface Order {
   }[];
 }
 
+export function generateStaticParams() {
+  return [];
+}
+
 export default function OrderPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const [order, setOrder] = useState<Order | null>(null);

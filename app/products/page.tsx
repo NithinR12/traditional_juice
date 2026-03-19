@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
@@ -132,7 +132,13 @@ function ProductsContent() {
 export default function ProductsPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
-      <ProductsContent />
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-900"></div>
+        </div>
+      }>
+        <ProductsContent />
+      </Suspense>
     </div>
   );
 }
