@@ -27,11 +27,11 @@ function ProductsContent() {
     selectedCategory === 'Juice'
       ? 'https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&q=80&w=2000'
       : 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&q=80&w=2000';
-  const heroTitle = selectedCategory === 'Juice' ? 'Fresh Juice Collection' : 'Our Collection';
+  const heroTitle = selectedCategory === 'Juice' ? 'Elixirs of Nature' : 'The Pure Selection';
   const heroSubtitle =
     selectedCategory === 'Juice'
-      ? 'Vibrant, cold‑pressed goodness for a healthier you.'
-      : 'Discover nature&apos;s finest offerings, curated for your well-being.';
+      ? 'Masterfully cold-pressed elixirs, designed to rejuvenate your soul.'
+      : 'A meticulous curation of earth&apos;s most extraordinary botanical treasures.';
 
   return (
     <>
