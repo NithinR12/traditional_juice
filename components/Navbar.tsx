@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/traditional_juice/" className="flex-shrink-0 z-50 group">
+          <Link href="/" className="flex-shrink-0 z-50 group">
             <span
               className={clsx(
                 'text-2xl font-serif font-bold tracking-tighter transition-all duration-500',
@@ -56,7 +56,7 @@ export default function Navbar() {
             {['Home', 'Products', 'Our Story', 'Contact'].map((item) => (
               <Link
                 key={item}
-                href={item === 'Home' ? '/traditional_juice/' : `/traditional_juice/${item.toLowerCase().replace(' ', '-')}/`}
+                href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
                 className={clsx(
                   'text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 relative group py-2',
                   isTransparent ? 'text-white/80' : 'text-gray-900/70 hover:text-green-900'
@@ -81,7 +81,7 @@ export default function Navbar() {
               </button>
               
               <Link
-                href="/traditional_juice/cart/"
+                href="/cart"
                 className={clsx(
                   'relative p-2 hover:scale-110 transition-transform duration-300',
                   isTransparent ? 'text-white/80' : 'text-gray-900/70 hover:text-green-900'

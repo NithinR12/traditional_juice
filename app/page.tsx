@@ -88,7 +88,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <Link
-                href="/traditional_juice/products/"
+                href="/products"
                 prefetch={false}
                 className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-green-900 text-xs font-bold uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl"
               >
@@ -100,7 +100,7 @@ export default function Home() {
               </Link>
               
               <Link
-                href="/traditional_juice/our-story/"
+                href="/our-story"
                 className="text-xs font-bold uppercase tracking-[0.2em] border-b border-white/30 hover:border-white transition-all pb-1"
               >
                 Our Story

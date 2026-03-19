@@ -123,7 +123,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 100, scale: 0.9 }}
               onClick={() => {
-                router.push('/traditional_juice/cart/');
+                router.push('/cart');
                 removeToast(toast.id);
               }}
               className="pointer-events-auto group relative flex items-center gap-5 p-5 bg-white rounded-[2rem] border border-stone-200/60 shadow-[0_20px_50px_rgba(26,71,42,0.1)] min-w-[340px] max-w-md overflow-hidden cursor-pointer hover:border-accent/50 transition-colors"
